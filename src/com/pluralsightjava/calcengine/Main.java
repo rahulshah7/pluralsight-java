@@ -1,25 +1,29 @@
 package com.pluralsightjava.calcengine;
 
+import java.util.Arrays;
+
 public class Main {
 
     public static void main(String[] args) {
-	    double val1 = 50.0d;
-	    double val2 = 25.0d;
-	    double result;
-	    char opCode = 'd';
+	    double[] leftVals = {50.0d, 25.0d, 10.0d, 200.0d};
+	    double[] rightVals = {10.0d, 5.0d, 10.0d, 1000.0d};
+	    char[] opCodes = {'a','s','m','d'};
+	    double[] results = new double[opCodes.length];
 
-	    if(opCode == 'a')
-	        result = val1 + val2;
-	    else if(opCode == 's')
-	        result = val1 - val2;
-		else if(opCode == 'm')
-			result = val1 * val2;
-		else if(opCode == 'd')
-			result = val2 != 0.0d ? val1 / val2 : 0.0d;
-	    else {
-			System.err.println("Invalid opCode");
-			result = 0.0d;
+		for(int i = 0; i < opCodes.length; i++) {
+			if (opCodes[i] == 'a')
+				results[i] = leftVals[i] + rightVals[i];
+			else if (opCodes[i] == 's')
+				results[i] = leftVals[i] - rightVals[i];
+			else if (opCodes[i] == 'm')
+				results[i] = leftVals[i] * rightVals[i];
+			else if (opCodes[i] == 'd')
+				results[i] = leftVals[i] != 0.0d ? leftVals[i] / rightVals[i] : 0.0d;
+			else {
+				System.err.println("Invalid opCode");
+				results[i] = 0.0d;
+			}
 		}
-	    System.out.println(result);
+	    System.out.println(Arrays.toString(results));
     }
 }
