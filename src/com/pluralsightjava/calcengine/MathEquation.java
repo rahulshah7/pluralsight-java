@@ -6,13 +6,32 @@ public class MathEquation {
     private char opCode;
     private double result;
 
+    /*Setters*/
+
     public void setLeftVal(double leftVal){this.leftVal = leftVal;}
     public void setRightVal(double rightVal){this.rightVal = rightVal;}
     public void setOpCode(char opCode){this.opCode = opCode;}
 
+    /*Getters*/
+
     public double getResult(){return this.result;}
 
-    
+    /*Constructors*/
+
+    public MathEquation(){}
+
+    public MathEquation(char opCode){
+        this.opCode = opCode;
+    }
+
+    public MathEquation(char opCode, double leftVal, double rightVal){
+        this(opCode);
+        this.leftVal = leftVal;
+        this.rightVal = rightVal;
+    }
+
+    /*Methods*/
+
     public void execute() {
         switch (opCode) {
             case 'a':
