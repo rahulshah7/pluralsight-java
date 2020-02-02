@@ -12,7 +12,7 @@ public class MathEquation {
 
     public double getResult(){return this.result;}
 
-
+    
     public void execute() {
         switch (opCode) {
             case 'a':

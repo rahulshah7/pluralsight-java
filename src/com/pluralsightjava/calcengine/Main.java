@@ -1,7 +1,5 @@
 package com.pluralsightjava.calcengine;
 
-import java.util.Arrays;
-
 public class Main {
 
     public static void main(String[] args) {
@@ -19,7 +17,6 @@ public class Main {
 			System.out.println(equation.getResult());
 		}
     }
-
 
     public static MathEquation create(double leftVal, double rightVal, char opCode) {
 		MathEquation equation = new MathEquation();
