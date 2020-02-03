@@ -40,5 +40,23 @@ public class Main {
 		overloadedEquation.execute((double)leftInt, rightInt);
 		System.out.print("Result = ");
 		System.out.println(overloadedEquation.getResult());
+
+		System.out.println();
+		System.out.println("Using inheritance:");
+		System.out.println();
+
+		CalculateBase[] calculations = {
+				new Adder(5.0d, 2.0d),
+				new Subtracter(10.0d, 2.0d),
+				new Multiplier(25.0d, 2.0d),
+				new Divider(15.0d, 2.0d),
+		};
+
+		for(CalculateBase calculation : calculations) {
+			calculation.calculate();
+			System.out.print("Result = ");
+			System.out.println(calculation.getResult());
+		}
+
     }
 }
