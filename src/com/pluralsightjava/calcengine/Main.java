@@ -16,5 +16,14 @@ public class Main {
 			System.out.print("Result = ");
 			System.out.println(equation.getResult());
 		}
+
+		System.out.println();
+		System.out.println("Using overloads:");
+		System.out.println();
+
+		MathEquation overloadedEquation = new MathEquation('a');
+		overloadedEquation.execute(48.0, 52.0);
+		System.out.print("Result = ");
+		System.out.println(overloadedEquation.getResult());
     }
 }
