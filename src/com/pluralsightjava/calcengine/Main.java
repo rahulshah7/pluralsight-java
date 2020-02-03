@@ -21,8 +21,23 @@ public class Main {
 		System.out.println("Using overloads:");
 		System.out.println();
 
-		MathEquation overloadedEquation = new MathEquation('a');
-		overloadedEquation.execute(48.0, 52.0);
+		MathEquation overloadedEquation = new MathEquation('d');
+
+		double leftDouble = 9.0d;
+		double rightDouble = 4.0d;
+
+		int leftInt = 9;
+		int rightInt = 4;
+
+		overloadedEquation.execute(leftDouble, rightDouble);
+		System.out.print("Result = ");
+		System.out.println(overloadedEquation.getResult());
+
+		overloadedEquation.execute(leftInt, rightInt);
+		System.out.print("Result = ");
+		System.out.println(overloadedEquation.getResult());
+
+		overloadedEquation.execute((double)leftInt, rightInt);
 		System.out.print("Result = ");
 		System.out.println(overloadedEquation.getResult());
     }
