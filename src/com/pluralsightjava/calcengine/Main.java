@@ -20,14 +20,13 @@ public class Main {
 		for (String statement : statements) {
 			try {
 				helper.process(statement);
+				System.out.println(helper.toString());
 			}
 			 catch (InvalidStatementException e) {
 				System.err.println(e.getMessage());
 				if (e.getCause() != null)
 					System.err.println("\t Original exception: " + e.getCause().getMessage());
-				continue;
 			}
-			System.out.println(helper.toString());
 		}
     }
 
