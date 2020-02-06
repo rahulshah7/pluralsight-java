@@ -3,8 +3,21 @@ package com.pluralsightjava.calcengine;
 public class Main {
 
     public static void main(String[] args) {
-    	useMathEquation();
-    	useCalculateBase();
+//    	useMathEquation();
+//    	useCalculateBase();
+
+		String[] statements = {
+			"add 50.0 5.0",
+			"subtract 25.0 5.0",
+			"multiply 50.0 10.0",
+			"divide 50.0 10.0"
+		};
+
+		CalculateHelper helper = new CalculateHelper();
+		for (String statement : statements) {
+			helper.process(statement);
+			System.out.println(helper.toString());
+		}
     }
 
     static void useMathEquation(){
