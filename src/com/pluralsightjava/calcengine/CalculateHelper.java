@@ -8,10 +8,10 @@ public class CalculateHelper {
     private static final char DIVIDE_SYMBOL = '/';
 
 
-    MathOperator operator;
-    double leftValue;
-    double rightValue;
-    double result;
+    private MathOperator operator;
+    private double leftValue;
+    private double rightValue;
+    private double result;
 
     public void process(String statement) throws InvalidStatementException{
         String[] parts = statement.split(" ");
